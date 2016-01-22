@@ -1,0 +1,62 @@
+Source: python-pygit2
+Section: python
+Priority: optional
+Maintainer: PKG OpenStack <openstack-devel@lists.alioth.debian.org>
+Uploaders: Thomas Goirand <zigo@debian.org>,
+Build-Depends: debhelper (>= 9),
+               dh-python,
+               libffi-dev,
+               libgit2-dev (>= 0.23),
+               python-all-dev,
+               python-cffi (>= 0.9.2),
+               python-pycparser,
+               python-setuptools,
+               python-sphinx,
+               python3-all-dev,
+               python3-cffi (>= 0.9.2),
+               python3-pycparser,
+               python3-setuptools,
+Standards-Version: 3.9.6
+Vcs-Browser: http://anonscm.debian.org/gitweb/?p=openstack/python-pygit2.git
+Vcs-Git: git://anonscm.debian.org/openstack/python-pygit2.git
+Homepage: https://github.com/libgit2/pygit2
+
+Package: python-pygit2
+Architecture: any
+Depends: python-cffi (>= 0.9.2),
+         ${misc:Depends},
+         ${python:Depends},
+         ${shlibs:Depends},
+Suggests: python-pygit2-doc,
+Description: bindings for libgit2 - Python 2.x
+ The Pygit2 module provides a set of Python bindings to the libgit2 shared
+ library. libgit2 implements the core of Git. Pygit2 works with Python 2.7,
+ 3.2, 3.3, 3.4 and pypy.
+ .
+ This package contains the Python 2.x module.
+
+Package: python3-pygit2
+Architecture: any
+Depends: python3-cffi (>= 0.9.2),
+         ${misc:Depends},
+         ${python3:Depends},
+         ${shlibs:Depends},
+Suggests: python-pygit2-doc,
+Description: bindings for libgit2 - Python 3.x
+ The Pygit2 module provides a set of Python bindings to the libgit2 shared
+ library. libgit2 implements the core of Git. Pygit2 works with Python 2.7,
+ 3.2, 3.3, 3.4 and pypy.
+ .
+ This package contains the Python 3.x module.
+
+Package: python-pygit2-doc
+Section: doc
+Architecture: all
+Depends: ${misc:Depends},
+         ${sphinxdoc:Depends},
+Description: bindings for libgit2 - doc
+ The Pygit2 module provides a set of Python bindings to the libgit2 shared
+ library. libgit2 implements the core of Git. Pygit2 works with Python 2.7,
+ 3.2, 3.3, 3.4 and pypy.
+ .
+ This package contains the documentation.
